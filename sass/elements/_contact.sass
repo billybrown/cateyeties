@@ -1,0 +1,30 @@
+.contact
+  background: $context-red
+  width: 100%
+  text-align: center
+  color: white
+  border: 10px solid black
+  +box-sizing(border-box)
+
+  +break-medium
+    height: 100%
+
+  p
+    @extend .font-read
+
+  a
+    color: black
+
+    &:hover
+      border-bottom: 2px solid black
+
+  h1
+    padding-top: 10%
+    font-family: menschmensch_bold_inline
+    font-size: 60px
+    margin-bottom: 10px
+
+    +break-medium
+      font-size: 100px
+      margin-bottom: 20px
+      padding-top: 20%

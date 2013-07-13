@@ -1,17 +1,20 @@
-@import compass
-@import color-schemer
-@import breakpoint
+@import compass/utilities/general/clearfix
+@import compass/css3/box-sizing
+@import compass/css3/background-size
+@import compass/css3/transition
+@import compass/css3/border-radius
 
 // ==========================================================================
 // Breakpoints
 
-$xsmall: 16em
-$small: 24em
-$medium: 38em
-$large: 53em
-$xlarge: 70em
 
-// ==========================================================================
+$medium: 38.75em
+
+@mixin break-medium
+  @media only screen and (min-width: $medium)
+    @content
+
+// =================================å=========================================
 // Grid & sizes
 
 $gutter: 2em
@@ -20,11 +23,13 @@ $radius: 4px
 
 // ==========================================================================
 // Colors
+$web-black: #333
+$context-red: #ff2c4a
 
 $primary: #fcb24c
 $secondary: #f89734
 $tertiary: #e87d3d
-$quadrary: shade($tertiary, 80%)
+$quadrary: darken($tertiary, 80%)
 
 $background-color: white
 $text-color: $quadrary
@@ -32,8 +37,8 @@ $text-color: $quadrary
 // ==========================================================================
 // Typography
 
-$serif: 'Merriweather Sans', Georgia, serif
-$sans: 'Telex', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+$font-title: menschmensch_regular, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+$font-read: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 $monospace: "source-code-pro", monospace
 
 

@@ -1,0 +1,113 @@
+.featured
+  width: 100%
+  +clearfix
+  height: auto
+  display: none
+
+  +break-medium
+    width: 100%
+    height: 100%
+    display: block
+
+.arrow
+  position: absolute
+  z-index: 10
+  font-family: menschmensch_bold_inline
+  font-size: 60px
+  top: 50%
+  cursor: pointer
+  color: black
+  z-index: 200
+
+  &.right
+    right: 20px
+
+  &.left
+    left: 20px
+
+  &:hover
+    color: $context-red
+
+.featured-ties
+  width: 100%
+  height: auto
+  border: 10px solid white
+  +box-sizing(border-box)
+  overflow: hidden
+
+  +break-medium
+    height: 100%
+    position: absolute
+    top: 0
+    z-index: 100
+    overflow: hidden
+
+  li
+    +background-size(cover)
+    width: 100%
+    height: 100%
+    //display: none
+    background-position: center
+    position: absolute
+    top: 250px
+    z-index: 1
+    display: block
+    +transition(right .5s ease-in-out)
+
+    +break-medium
+      top: 0
+
+    &.active
+      z-index: 2
+
+.tie-1
+  background: url(../img/tie-1.jpg)
+
+.tie-2
+  background: url(../img/tie-2.jpg)
+
+.tie-3
+  background: url(../img/tie-3.jpg)
+
+.logo
+  width: 200px
+  margin: 50px auto 0
+  display: block
+
+  +break-medium
+    position: absolute
+    z-index: 200
+    right: 26px
+    top: 30px
+    width: 250px
+    margin: 0
+
+.tie-info
+  position: absolute
+  bottom: 0
+  right: 0
+  text-align: right
+  background: white
+  padding: 5px 17px 10px
+
+h1
+  @extend .font-title
+  margin-bottom: 8px
+
+.button
+  padding: 8px 10px
+  color: white
+  background: black
+  +border-radius(2px)
+  text-transform: uppercase
+  font-family: outageregular
+  font-size: 20px
+  font-weight: normal
+
+  &.price
+    background: #aaa
+
+  &.buy
+
+    &:hover
+      background: $context-red

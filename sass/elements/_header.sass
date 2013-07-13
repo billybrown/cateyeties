@@ -1,2 +1,28 @@
 .site-header
-  //nuthin
+  background: white
+  padding: 5px 15px 2px 0
+  +clearfix
+
+  +break-medium
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 300
+
+  li
+    float: left
+
+  a
+    @extend .font-title-small
+    color: $web-black
+    display: block
+    margin-left: 15px
+    cursor: pointer
+    font-size: 20px
+    line-height: 1.5em
+
+    &:hover
+      color: $context-red
+
+    +break-medium
+      font-size: 24px
